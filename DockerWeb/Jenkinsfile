@@ -23,6 +23,8 @@ pipeline {
                 script{
                     sh ''' 
                          docker stop ${name_final}
+                         wait 4
+                         docker rm ${name_final}
                     '''
                     }
                     
